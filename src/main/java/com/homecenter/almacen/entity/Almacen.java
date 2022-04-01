@@ -1,22 +1,32 @@
 package com.homecenter.almacen.entity;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
 public class Almacen {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_almacen",nullable = false,unique = true)
     private Long id;
     //nombre
+    @Column(length = 50)
     private String name;
     //fecha de configuración
     private LocalDate dateConfig;
     //capacidad de clientes
     private int clientCapacity;
 
-    public Almacen(Long id, String name, LocalDate dateConfig, int clientCapacity) {
-        this.id = id;
+    public Almacen( String name, LocalDate dateConfig, int clientCapacity) {
         this.name = name;
         this.dateConfig = dateConfig;
         this.clientCapacity = clientCapacity;
+    }
+    public Almacen(Long id) {
+        this.id = id;
+    }
+    public Almacen() {
     }
 
     public Long getId() {
