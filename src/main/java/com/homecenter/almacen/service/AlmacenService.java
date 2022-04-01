@@ -22,7 +22,7 @@ public class AlmacenService {
                 .map(
                         oldAlmacen -> {
                             oldAlmacen.setName(newAlmacen.getName());
-                            oldAlmacen.setDateConfig(newAlmacen.getDateConfig());
+                            oldAlmacen.setDateInaguration(newAlmacen.getDateInaguration());
                             oldAlmacen.setClientCapacity(newAlmacen.getClientCapacity());
                         return  almacenRepository.save(oldAlmacen);
                         }

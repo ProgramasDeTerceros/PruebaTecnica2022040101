@@ -6,13 +6,13 @@ import java.time.LocalDate;
 public class AlmacenDTO {
     private Long id;
     private String name;
-    private LocalDate dateConfig;
+    private LocalDate dateInaguration;
     private int clientCapacity;
 
-    public AlmacenDTO(Long id, String name, LocalDate dateConfig, int clientCapacity) {
+    public AlmacenDTO(Long id, String name, LocalDate dateInaguration, int clientCapacity) {
         this.id = id;
         this.name = name;
-        this.dateConfig = dateConfig;
+        this.dateInaguration = dateInaguration;
         this.clientCapacity = clientCapacity;
     }
 
@@ -32,12 +32,12 @@ public class AlmacenDTO {
         this.name = name;
     }
 
-    public LocalDate getDateConfig() {
-        return dateConfig;
+    public LocalDate getDateInaguration() {
+        return dateInaguration;
     }
 
-    public void setDateConfig(LocalDate dateConfig) {
-        this.dateConfig = dateConfig;
+    public void setDateInaguration(LocalDate dateInaguration) {
+        this.dateInaguration = dateInaguration;
     }
 
     public int getClientCapacity() {
@@ -53,7 +53,7 @@ public class AlmacenDTO {
         return "AlmacenDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", dateConfig=" + dateConfig +
+                ", dateInaguration=" + dateInaguration +
                 ", clientCapacity=" + clientCapacity +
                 '}';
     }

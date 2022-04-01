@@ -13,14 +13,14 @@ public class Almacen {
     //nombre
     @Column(length = 50)
     private String name;
-    //fecha de configuración
-    private LocalDate dateConfig;
+    //fecha de inaguracion
+    private LocalDate dateInaguration;
     //capacidad de clientes
     private int clientCapacity;
 
-    public Almacen( String name, LocalDate dateConfig, int clientCapacity) {
+    public Almacen( String name, LocalDate dateInaguration, int clientCapacity) {
         this.name = name;
-        this.dateConfig = dateConfig;
+        this.dateInaguration = dateInaguration;
         this.clientCapacity = clientCapacity;
     }
     public Almacen(Long id) {
@@ -45,12 +45,12 @@ public class Almacen {
         this.name = name;
     }
 
-    public LocalDate getDateConfig() {
-        return dateConfig;
+    public LocalDate getDateInaguration() {
+        return dateInaguration;
     }
 
-    public void setDateConfig(LocalDate dateConfig) {
-        this.dateConfig = dateConfig;
+    public void setDateInaguration(LocalDate dateConfig) {
+        this.dateInaguration = dateConfig;
     }
 
     public int getClientCapacity() {
@@ -66,7 +66,7 @@ public class Almacen {
         return "Almacen{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", dateConfig=" + dateConfig +
+                ", dateConfig=" + dateInaguration +
                 ", clientCapacity=" + clientCapacity +
                 '}';
     }
@@ -76,11 +76,11 @@ public class Almacen {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Almacen almacen = (Almacen) o;
-        return clientCapacity == almacen.clientCapacity && Objects.equals(id, almacen.id) && Objects.equals(name, almacen.name) && Objects.equals(dateConfig, almacen.dateConfig);
+        return clientCapacity == almacen.clientCapacity && Objects.equals(id, almacen.id) && Objects.equals(name, almacen.name) && Objects.equals(dateInaguration, almacen.dateInaguration);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, dateConfig, clientCapacity);
+        return Objects.hash(id, name, dateInaguration, clientCapacity);
     }
 }
